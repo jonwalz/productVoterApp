@@ -15,7 +15,7 @@ section {height: 30vh;}
 }
 .item {
     width: 400px;
-    max-height: 300px;
+    height: 200px;
     display: flex;
     border: 6px solid black;
     border-radius: 5px;
