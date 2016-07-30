@@ -1,6 +1,7 @@
 var chart;
 function renderChart() {
     	chart = new CanvasJS.Chart("chartContainer", {
+        width: 500,
         backgroundColor: "#588C7E",
         axisX : {
             labelFontColor: "#F2E394"
@@ -14,7 +15,8 @@ function renderChart() {
 	    },
 	    data: [{
 	        // Change type to "doughnut", "line", "splineArea", etc.
-	        type: "column",
+            indexLabelFontColor: "#F2E394",
+	        type: "doughnut",
 	        dataPoints: [{
                 color: '#FF974F',
 	            label: imageOptions[0].name,

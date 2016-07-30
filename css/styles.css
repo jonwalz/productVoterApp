@@ -1,11 +1,18 @@
 body {
-    background-color: #E3CDA4;
+    background-color: #8C4646;
     color: #2F343B;
     font-family: 'Open Sans', sans-serif;
 }
 
 
-section {height: 30vh;}
+section {
+    height: 20vh;
+    background-color: #E3CDA4;
+    padding: 10px 0;
+    margin: 10px auto;
+    border-radius: 5px;
+    width: 75%;
+    }
 #container {
     margin: 0 auto;
     width: 75%;
@@ -52,7 +59,14 @@ section {height: 30vh;}
 .votesList {
     list-style-type: none; 
 }
-
+#chartStyle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#chartContainer {
+    width: 80%;
+}
 @media screen and (max-width: 600px) {
   #container {
     width: 100%;
