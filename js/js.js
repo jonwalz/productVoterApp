@@ -73,7 +73,7 @@ function checkVotes() {
         parentEl.appendChild(votesList);
         // document.getElementById('container').removeEventListener("click", recordClick);
         document.getElementById('votes').parentNode.style.display = "Block";
-        // chart.render();
+        renderChart();
     }
 }
 
