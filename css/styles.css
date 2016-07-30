@@ -1,0 +1,60 @@
+body {
+    background-color: #E3CDA4;
+    color: #2F343B;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+section {height: 30vh;}
+#container {
+    margin: 0 auto;
+    width: 75%;
+    max-height: 2d00px;
+    display: flex;
+
+}
+.item {
+    width: 400px;
+    max-height: 300px;
+    display: flex;
+    border: 6px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.item div {
+    position: relative;
+    display: flex;
+    text-align: center;
+    width: 400px;
+}
+
+.item > div > img {
+    align-self: center;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    max-height: 200px;
+}
+.responsiveImg {
+    max-width: 100%;
+    max-height: 200px;
+}
+#instructions {
+    text-align: center;
+}
+
+#votes {
+    text-align: center;
+}
+
+.votesList {
+    list-style-type: none; 
+}
+
+@media screen and (max-width: 600px) {
+  #container {
+    width: 100%;
+  }
+}

@@ -44,9 +44,29 @@ function checkVotes() {
     totalVotes++;
     if (totalVotes == 15) {
         var el = document.createElement('div');
+        var elH1 = document.createElement('h1');
         el.className = "totalVotes";
+        el.innerText = "You have reached 15 votes. This is what you voted for:";
         var parentEl = document.getElementById('votes');
         console.log("Votes reached 15");
+        
+        parentEl.appendChild(elH1).appendChild(el);
+
+        var removeText = document.getElementById('instructions');
+        removeText.parentNode.remove();
+
+        var votesList = document.createElement('ul');
+        votesList.className = "votesList";
+        for (var i = 0; i < imageOptions.length; i++) {
+            if(imageOptions[i].upVotes != 0) {
+                var voteLi = document.createElement('li');
+                voteLi.innerText = imageOptions[i].name + ": " + imageOptions[i].upVotes;
+                votesList.appendChild(voteLi);
+            }   
+        }
+        
+        parentEl.appendChild(votesList);
+        document.getElementById('container').removeEventListener("click", recordClick);
     }
 }
 

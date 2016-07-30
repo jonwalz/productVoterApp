@@ -3,22 +3,43 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Voting App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="/css/styles.css">
 </head>
 
 <body>
     <section>
         <div id="container">
-           <div><img id="img1"></div>
-            <div><img id="img2"></div>
-            <div><img id="img3"></div>
+            <div class="item">
+                <div>
+                    <img id="img1" class="responsiveImg">
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img id="img2" class="responsiveImg">
+                </div>
+            </div>
+            <div class="item">
+                <div>
+                    <img id="img3" class="responsiveImg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div id="instructions">
+            <h1>Click on your favorite photo to vote!</h1>
+            <h3>Your votes will be tallied after 15 votes</h3>
         </div>
     </section>
     <section>
         <div id="votes"></div>
     </section>
-    <script src="js.js"></script>
+    <script src="/js/js.js"></script>
 </body>
 
 </html>
