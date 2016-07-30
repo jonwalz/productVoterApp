@@ -6,7 +6,7 @@ body {
 
 
 section {
-    height: 20vh;
+
     background-color: #E3CDA4;
     padding: 10px 0;
     margin: 10px auto;
@@ -16,7 +16,6 @@ section {
 #container {
     margin: 0 auto;
     width: 75%;
-    max-height: 2d00px;
     display: flex;
 
 }
@@ -24,7 +23,7 @@ section {
     width: 400px;
     height: 200px;
     display: flex;
-    border: 6px solid black;
+    border: 6px solid #4e2d16;
     border-radius: 5px;
     margin: 10px;
     overflow: hidden;
@@ -57,15 +56,15 @@ section {
 }
 
 .votesList {
-    list-style-type: none; 
+    list-style-type: none;
 }
 #chartStyle {
     width: 100%;
-    display: flex;
-    justify-content: center;
 }
 #chartContainer {
-    width: 80%;
+  margin: 0 auto;
+  display: flex;
+  width: 80%;
 }
 @media screen and (max-width: 600px) {
   #container {
