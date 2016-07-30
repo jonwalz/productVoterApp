@@ -1,7 +1,7 @@
 var chart;
 function renderChart() {
     	chart = new CanvasJS.Chart("chartContainer", {
-        
+
         backgroundColor: "#588C7E",
         axisX : {
             labelFontColor: "#F2E394"
@@ -22,27 +22,27 @@ function renderChart() {
 	            label: imageOptions[0].name,
 	            y: imageOptions[0].upVotes
 	        }, {
-                color: '#FF974F',
+                color: '#d47e42',
 	            label: imageOptions[1].name,
 	            y: imageOptions[1].upVotes
 	        },
             {
-                color: '#FF974F',
+                color: '#b16835',
 	            label: imageOptions[2].name,
 	            y: imageOptions[2].upVotes
 	        },
             {
-                color: '#FF974F',
+                color: '#8a5029',
 	            label: imageOptions[3].name,
 	            y: imageOptions[3].upVotes
 	        },
             {
-                color: '#FF974F',
+                color: '#704120',
 	            label: imageOptions[4].name,
 	            y: imageOptions[4].upVotes
 	        },
             {
-                color: '#FF974F',
+                color: '#4e2d16',
 	            label: imageOptions[5].name,
 	            y: imageOptions[5].upVotes
 	        }]
