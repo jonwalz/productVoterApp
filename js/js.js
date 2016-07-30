@@ -14,7 +14,7 @@ var imageOptions = [
     new imageTracker("Dragon", "images/dragon.jpg"),
 ];
 
-document.getElementById('container').addEventListener("click", recordClick);
+// document.getElementById('container').addEventListener("click", recordClick);
 
 function getThreeImages() {
     var pickedImages = [];
@@ -33,12 +33,18 @@ function recordClick(event) {
     for (var index = 0; index < imageOptions.length; index++) {
         if (imageSource.indexOf(imageOptions[index].imageSource) >= 0) {
             imageOptions[index].upVotes++;
-            console.log('Image Clicked: ' + imageOptions[index].name);
         }
     }
     getThreeImages();
     checkVotes();
+    
+    console.log(imageOptions[0].upVotes);
 }
+
+(function removeVotesEl() {
+    var el = document.getElementById('votes');
+    el.parentNode.style.display = "none";
+})();
 
 function checkVotes() {
     totalVotes++;
@@ -48,7 +54,6 @@ function checkVotes() {
         el.className = "totalVotes";
         el.innerText = "You have reached 15 votes. This is what you voted for:";
         var parentEl = document.getElementById('votes');
-        console.log("Votes reached 15");
         
         parentEl.appendChild(elH1).appendChild(el);
 
@@ -66,8 +71,11 @@ function checkVotes() {
         }
         
         parentEl.appendChild(votesList);
-        document.getElementById('container').removeEventListener("click", recordClick);
+        // document.getElementById('container').removeEventListener("click", recordClick);
+        document.getElementById('votes').parentNode.style.display = "Block";
+        // chart.render();
     }
 }
 
 getThreeImages();
+
