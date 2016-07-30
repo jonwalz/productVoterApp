@@ -5,13 +5,22 @@ var imageTracker = function(name, source) {
     this.name = name;
 };
 
+
 var imageOptions = [
-    new imageTracker("Banana", "images/banana.jpg"),
-    new imageTracker("Bag", "images/bag.jpg"),
-    new imageTracker("Boots", "images/boots.jpg"),
-    new imageTracker("Chair", "images/chair.jpg"),
-    new imageTracker("Cthulhu", "images/cthulhu.jpg"),
-    new imageTracker("Dragon", "images/dragon.jpg"),
+  new imageTracker("Banana", "images/banana.jpg"),
+  new imageTracker("Bag", "images/bag.jpg"),
+  new imageTracker("Boots", "images/boots.jpg"),
+  new imageTracker("Chair", "images/chair.jpg"),
+  new imageTracker("Cthulhu", "images/cthulhu.jpg"),
+  new imageTracker("Dragon", "images/dragon.jpg"),
+  new imageTracker("Pen", "images/pen.jpg"),
+  new imageTracker("Scissor", "images/scissors.jpg"),
+  new imageTracker("Shark", "images/shark.jpg"),
+  new imageTracker("Sweep", "images/sweep.jpg"),
+  new imageTracker("Unicorn", "images/unicorn.jpg"),
+  new imageTracker("Usb", "images/usb.jpg"),
+  new imageTracker("Water_Can", "images/water_can.jpg"),
+  new imageTracker("Wine_Glass", "images/wine_glass.jpg"),
 ];
 
 // document.getElementById('container').addEventListener("click", recordClick);
@@ -20,7 +29,7 @@ function getThreeImages() {
     var pickedImages = [];
     for (var imageId = 1; imageId <= 3; imageId++) {
         do {
-            var index = Math.floor(Math.random() * 6);
+            var index = Math.floor(Math.random() * 14);
         } while (pickedImages.indexOf(index) >= 0);
         var source = imageOptions[index].imageSource;
         document.getElementById("img" + imageId).src = source;
@@ -37,7 +46,7 @@ function recordClick(event) {
     }
     getThreeImages();
     checkVotes();
-    
+
     console.log(imageOptions[0].upVotes);
 }
 
@@ -54,7 +63,7 @@ function checkVotes() {
         el.className = "totalVotes";
         el.innerText = "You have reached 15 votes. This is what you voted for:";
         var parentEl = document.getElementById('votes');
-        
+
         parentEl.appendChild(elH1).appendChild(el);
 
         var removeText = document.getElementById('instructions');
@@ -67,9 +76,9 @@ function checkVotes() {
                 var voteLi = document.createElement('li');
                 voteLi.innerText = imageOptions[i].name + ": " + imageOptions[i].upVotes;
                 votesList.appendChild(voteLi);
-            }   
+            }
         }
-        
+
         parentEl.appendChild(votesList);
         // document.getElementById('container').removeEventListener("click", recordClick);
         document.getElementById('votes').parentNode.style.display = "Block";
@@ -78,4 +87,3 @@ function checkVotes() {
 }
 
 getThreeImages();
-
