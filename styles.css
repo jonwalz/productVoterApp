@@ -1,9 +1,19 @@
 #container {
-    width: 75%;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    height: 200px;
+    width: 100%;
+    flex-flow: row-wrap;
+    /*margin: 0 auto;*/
 }
-#container img {
-    width: 32%;
-    max-height: 300px;
+#container div {
+    width: 200px;
+    display: inline-block;
+    height: 200px;
+    flex: auto;
+}
+#container div img {
+    flex-shrink: 1;
+    height: 200px;
     border: 1px solid black;
 }

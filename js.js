@@ -1,3 +1,4 @@
+var totalVotes = 0;
 var imageTracker = function(name, source) {
     this.imageSource = source;
     this.upVotes = 0;
@@ -13,9 +14,6 @@ var imageOptions = [
     new imageTracker("Dragon", "images/dragon.jpg"),
 ];
 
-// document.getElementById('img1').addEventListener("click", recordClick);
-// document.getElementById('img2').addEventListener("click", recordClick);
-// document.getElementById('img3').addEventListener("click", recordClick);
 document.getElementById('container').addEventListener("click", recordClick);
 
 function getThreeImages() {
@@ -25,7 +23,7 @@ function getThreeImages() {
             var index = Math.floor(Math.random() * 6);
         } while (pickedImages.indexOf(index) >= 0);
         var source = imageOptions[index].imageSource;
-        document.getElementById("img"+imageId).src = source;
+        document.getElementById("img" + imageId).src = source;
         pickedImages.push(index);
     }
 }
@@ -35,15 +33,21 @@ function recordClick(event) {
     for (var index = 0; index < imageOptions.length; index++) {
         if (imageSource.indexOf(imageOptions[index].imageSource) >= 0) {
             imageOptions[index].upVotes++;
-            console.log('Image Clicked: ' +imageOptions[index].name);
+            console.log('Image Clicked: ' + imageOptions[index].name);
         }
     }
     getThreeImages();
+    checkVotes();
 }
 
 function checkVotes() {
-    if()
+    totalVotes++;
+    if (totalVotes == 15) {
+        var el = document.createElement('div');
+        el.className = "totalVotes";
+        var parentEl = document.getElementById('votes');
+        console.log("Votes reached 15");
+    }
 }
 
-getThreeImages();   
-
+getThreeImages();
