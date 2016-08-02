@@ -1,7 +1,7 @@
 var chart;
 function renderChart() {
     	chart = new CanvasJS.Chart("chartContainer", {
-				
+		height: 260,		
         backgroundColor: "#588C7E",
         axisX : {
             labelFontColor: "#F2E394"
