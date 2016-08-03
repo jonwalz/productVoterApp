@@ -50,4 +50,4 @@ function renderChart() {
 	});
     chart.render();
 }
-	document.getElementById('container').addEventListener("click", recordClick);
+	document.getElementById('container').addEventListener("click", recordClick, true);
