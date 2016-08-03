@@ -52,7 +52,7 @@ function recordClick(event) {
 
 (function removeVotesEl() {
     var el = document.getElementById('votes');
-    el.parentNode.style.display = "none";
+    el.parentNode.style.display = "none"; 
 })();
 
 function checkVotes() {
@@ -61,7 +61,7 @@ function checkVotes() {
         var el = document.createElement('div');
         var elH1 = document.createElement('h1');
         el.className = "totalVotes";
-        el.innerText = "You have reached 15 votes. This is what you voted for:";
+        el.innerText = "You have reached 15 votes. This is what you voted for:" ;
         var parentEl = document.getElementById('votes');
 
         parentEl.appendChild(elH1).appendChild(el);
