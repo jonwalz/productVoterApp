@@ -86,8 +86,8 @@ function checkVotes() {
         }
         
         dataConstruct();
-        parentEl.appendChild(votesList);
-        document.getElementById('votes').parentNode.style.display = "Block";
+        parentEl.parentElement.appendChild(votesList);
+        document.getElementById('votes').parentNode.style.display = "flex";
 
         var chartHide = document.getElementById('hideChart');
         chartHide.style.display = 'block';
