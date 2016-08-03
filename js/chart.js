@@ -49,46 +49,9 @@ function renderChart() {
 			indexLabelFontColor: "#F2E394",
 			type: "stackedBar100",
 			dataPoints: dataPointsVotes,
-			// dataPoints: [{
-			// 	color: '#FF974F',
-			// 	label: imageOptions[0].name,
-			// 	y: imageOptions[0].upVotes
-			// }, {
-			// 	color: '#d47e42',
-			// 	label: imageOptions[1].name,
-			// 	y: imageOptions[1].upVotes
-			// }, {
-			// 	color: '#b16835',
-			// 	label: imageOptions[2].name,
-			// 	y: imageOptions[2].upVotes
-			// }, {
-			// 	color: '#8a5029',
-			// 	label: imageOptions[3].name,
-			// 	y: imageOptions[3].upVotes
-			// }, {
-			// 	color: '#704120',
-			// 	label: imageOptions[4].name,
-			// 	y: imageOptions[4].upVotes
-			// }, {
-			// 	color: '#4e2d16',
-			// 	label: imageOptions[5].name,
-			// 	y: imageOptions[5].upVotes
-			// }]
 		}, {
 			type: "stackedBar100",
-			dataPoints: [{
-				y: imageOptions[0].displays - imageOptions[0].upVotes
-			}, {
-				y: imageOptions[1].displays - imageOptions[1].upVotes
-			}, {
-				y: imageOptions[2].displays - imageOptions[2].upVotes
-			}, {
-				y: imageOptions[3].displays - imageOptions[3].upVotes
-			}, {
-				y: imageOptions[4].displays - imageOptions[4].upVotes
-			}, {
-				y: imageOptions[5].displays - imageOptions[5].upVotes
-			}, ]
+			dataPoints: dataPointsViews
 		}]
 	});
 	chart.render();
