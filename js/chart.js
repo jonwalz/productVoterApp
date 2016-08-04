@@ -14,7 +14,8 @@ function dataConstruct() {
 
 	imageOptions.forEach(function(el, i) {
 		dataPointsViews.push({
-			y: imageOptions[i].displays
+			y: imageOptions[i].displays,
+			label: imageOptions[i].name
 		});
 	});
 
@@ -24,10 +25,19 @@ function renderChart() {
 
 	// set width of chart 
 	var chartWidthRef = document.getElementById('chartStyle').clientWidth;
-
+	CanvasJS.addColorSet("greenShades", [
+		"#2F4F4F",
+		"#008080",
+		"#2E8B57",
+		"#3CB371",
+		"#90EE90"
+	]);
 	chart = new CanvasJS.Chart("chartContainer", {
+		animationEnabled: true,
+		animationDuration: 2000,
+		colorSet: "greenShades",
 		width: chartWidthRef,
-		height: 260,
+		height: 460,
 		backgroundColor: "#4EAB59",
 		axisX: {
 			labelFontColor: "#F2E394",
@@ -44,11 +54,15 @@ function renderChart() {
 			fontColor: "#F2E394",
 		},
 		data: [{
+			showInLegend: true,
+			legendText: "Votes",
 			indexLabelFontColor: "#F2E394",
-			type: "stackedBar100",
+			type: "stackedColumn",
 			dataPoints: dataPointsVotes,
 		}, {
-			type: "stackedBar100",
+			showInLegend: true,
+			legendText: "Views",
+			type: "stackedColumn",
 			dataPoints: dataPointsViews
 		}]
 	});

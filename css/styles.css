@@ -75,7 +75,7 @@ section:nth-of-type(2n) {
 }
 
 section:last-of-type {
-    margin-bottom: 80px;
+    margin-bottom: 180px;
 }
 
 #votesContainer div,
@@ -147,7 +147,7 @@ section:last-of-type {
 #chartStyle {
     width: 100%;
     margin: 20px 0;
-    height: 260px;
+    height: 460px;
 }
 
 #chartContainer {
