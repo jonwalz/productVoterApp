@@ -75,25 +75,31 @@ function checkVotes() {
         var removeText = document.getElementById('instructions');
         removeText.parentNode.remove();
 
-        var votesList = document.createElement('ul');
-        votesList.className = "votesList";
+        var votesListTable = document.createElement('table');
+        votesListTable.className = "votesList";
+        // var votesListRow = document.createElement('tr');
+        // var votesListNameCell = document.createElement('td');
+        // var votesListVotesCell = document.createElement('td');
         for (var i = 0; i < imageOptions.length; i++) {
             if (imageOptions[i].upVotes !== 0) {
-                var voteLi = document.createElement('li');
-                voteLi.innerText = imageOptions[i].name + ": " + imageOptions[i].upVotes;
-                votesList.appendChild(voteLi);
+              var votesListRow = document.createElement('tr');
+              var votesListNameCell = document.createElement('td');
+              var votesListVotesCell = document.createElement('td');
+                votesListNameCell.innerText = imageOptions[i].name;  votesListVotesCell.innerText = imageOptions[i].upVotes;
+                votesListRow.appendChild(votesListNameCell).parentNode.appendChild(votesListVotesCell);
+                votesListTable.appendChild(votesListRow);
             }
         }
-        
+
         dataConstruct();
-        parentEl.parentElement.appendChild(votesList);
+        parentEl.parentElement.appendChild(votesListTable);
 
         // append to votes element
         document.getElementById('votes').parentNode.style.display = "flex";
 
         var chartHide = document.getElementById('hideChart');
         chartHide.style.display = 'block';
-        
+
         var chartContainer = document.getElementById('canvasjs-chart-container');
         // chartContainer.style.width= "100%"
         renderChart();
