@@ -9,6 +9,7 @@ body {
     background: url("../images/busback.jpg") no-repeat;
     background-size: 150% auto;
     background-position: center;
+    background-attachment: fixed;
 }
 
 nav {
@@ -153,7 +154,7 @@ section:last-of-type {
     list-style-type: none;
 }
 .votesList td {
-    padding: 0 25px;
+    padding: 0 60px;
 }
 
 #chartStyle {

@@ -40,11 +40,16 @@ function renderChart() {
 		height: 460,
 		backgroundColor: "#4EAB59",
 		axisX: {
+			labelAutoFit: true,
+			labelFontSize: 12,
+			labelAngle: 45,
 			labelFontColor: "#F2E394",
 			title: "Items",
 			titleFontColor: '#F2E394'
 		},
 		axisY: {
+			labelAutoFit: true,
+			labelFontSize: 12,
 			labelFontColor: "#F2E394",
 			title: "Number of Votes",
 			titleFontColor: '#F2E394'
