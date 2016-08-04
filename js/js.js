@@ -87,11 +87,15 @@ function checkVotes() {
         
         dataConstruct();
         parentEl.parentElement.appendChild(votesList);
+
+        // append to votes element
         document.getElementById('votes').parentNode.style.display = "flex";
 
         var chartHide = document.getElementById('hideChart');
         chartHide.style.display = 'block';
         
+        var chartContainer = document.getElementById('canvasjs-chart-container');
+        // chartContainer.style.width= "100%"
         renderChart();
     }
 }

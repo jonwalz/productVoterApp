@@ -18,9 +18,7 @@ function dataConstruct() {
 		});
 	});
 
-	console.log(dataPointsViews);
 }
-console.log("data views:" + dataPointsViews);
 
 function renderChart() {
 
@@ -55,5 +53,6 @@ function renderChart() {
 		}]
 	});
 	chart.render();
+	console.log(dataPointsViews);
 }
 document.getElementById('container').addEventListener("click", recordClick, true);
