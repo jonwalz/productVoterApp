@@ -89,7 +89,7 @@ section:last-of-type {
 }
 
 #votesContainer div,
-#votesContainer ul {
+#votesContainer table {
     display: inline-block;
     flex-grow: 1;
     align-self: center;

@@ -101,7 +101,6 @@ function checkVotes() {
         chartHide.style.display = 'block';
 
         var chartContainer = document.getElementById('canvasjs-chart-container');
-        // chartContainer.style.width= "100%"
         renderChart();
     }
 }

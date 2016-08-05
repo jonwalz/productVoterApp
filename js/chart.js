@@ -18,7 +18,6 @@ function dataConstruct() {
 			label: imageOptions[i].name
 		});
 	});
-
 }
 
 function renderChart() {
@@ -42,7 +41,6 @@ function renderChart() {
 		axisX: {
 			labelAutoFit: true,
 			labelFontSize: 12,
-			labelAngle: 45,
 			labelFontColor: "#F2E394",
 			title: "Items",
 			titleFontColor: '#F2E394'
@@ -51,7 +49,7 @@ function renderChart() {
 			labelAutoFit: true,
 			labelFontSize: 12,
 			labelFontColor: "#F2E394",
-			title: "Number of Votes",
+			title: "Number of Views",
 			titleFontColor: '#F2E394'
 		},
 		title: {
@@ -75,3 +73,12 @@ function renderChart() {
 	console.log(dataPointsViews);
 }
 document.getElementById('container').addEventListener("click", recordClick, true);
+
+// function to re-render chart after button press
+
+function reChart(){
+	dataPointsVotes = [];
+	dataPointsViews = [];
+	dataConstruct();
+    renderChart();
+}
