@@ -83,9 +83,7 @@ function checkVotes() {
 
         var votesListTable = document.createElement('table');
         votesListTable.className = "votesList";
-        // var votesListRow = document.createElement('tr');
-        // var votesListNameCell = document.createElement('td');
-        // var votesListVotesCell = document.createElement('td');
+        
         for (var i = 0; i < imageOptions.length; i++) {
             if (imageOptions[i].upVotes !== 0) {
               var votesListRow = document.createElement('tr');

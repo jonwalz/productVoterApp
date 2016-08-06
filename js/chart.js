@@ -7,6 +7,8 @@ var localStorageDataVotes = [];
 var localStorageDataViews = [];
 
 function dataConstruct() {
+	dataPointsVotes = [];
+	dataPointsViews = [];
 	imageOptions.forEach(function(el, i) {
 		dataPointsVotes.push({
 			y: imageOptions[i].upVotes,
@@ -18,20 +20,19 @@ function dataConstruct() {
 		});
 	});
 
+	// localStorageDataVotes = [];
+	// localStorageDataViews = [];
 	imageOptions.forEach(function(el, i) {
 		dataPointsViews.push({
 			y: imageOptions[i].displays,
 			label: imageOptions[i].name
 		});
-		localStorageDataViews.push({
-			y: imageOptions[i].upVotes,
-			label: imageOptions[i].name
-		});
 	});
+
 	// construct data for local storage
 	
-	localStorage.setItem('dataVotes', JSON.stringify(localStorageDataVotes));
-	localStorage.setItem('dataViews', JSON.stringify(localStorageDataViews));
+	localStorage.setItem('dataVotes', JSON.stringify(dataPointsVotes));
+	localStorage.setItem('dataViews', JSON.stringify(dataPointsViews));
 }
 
 function renderChart() {
@@ -88,6 +89,7 @@ function renderChart() {
 }
 // image click event listener
 document.getElementById('container').addEventListener("click", recordClick, true);
+document.getElementById('container').addEventListener("click", dataConstruct, true);
 
 // function to re-render chart after button press
 
