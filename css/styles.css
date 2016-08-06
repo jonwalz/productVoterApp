@@ -12,24 +12,69 @@ body {
     background-attachment: fixed;
 }
 
+#modalContainer {
+    background-color: rgba(0, 0, 0, 0.9);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+}
+
+#modal {
+    display: flex;
+    justify-content: center;
+}
+
+#modalForm {
+    align-self: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#modalForm input {
+    font-size: 20px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#modalExit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 20px 25px;
+    font-size: 24px;
+}
+
+#modalForm> button {
+    background-color: rgba(29, 181, 48, 0.8);
+    border: 2px solid rgba(18, 112, 30, 0.8);
+    border-radius: 5px;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 1px 1px rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 15px 32px;
+    align-self: center;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+}
+
 nav {
     background-color: black;
     color: white;
-    padding: 10px 20px;
 }
-nav #navContainer {
-    width: 50%;
-    margin: 0 auto;
-}
+
 header {
     font-family: 'Herr Von Muellerhoff', cursive;
     background-color: rgba(29, 181, 48, 0.8);
     border-bottom: 10px solid black;
-    padding: 10px;
-    text-align: center;
-    width: 75%;
-    margin: 0 auto;
-    width: 100%;
     box-shadow: 0px 17px 20px -15px #004609;
 }
 
@@ -37,39 +82,22 @@ header h1 {
     font-size: 70px;
     letter-spacing: 7px;
     text-shadow: 2px 2px black;
-    padding: 0;
-    margin: 10px auto;
-    width: 75%;
 }
 
 header h2 {
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
-    padding: 10px;
-    margin: 15px auto;
 }
 
 header h2 span {
     background-color: rgba(0, 0, 0, 0.8);
     border-radius: 5px;
     background-position: center;
-    padding: 10px 40px;
-}
-
-#container {
-    margin: 20px auto;
-    padding: 10px;
-    border-radius: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: center;
 }
 
 section {
     border-radius: 5px;
     background-color: rgba(0, 0, 0, 0.0);
-    width: 100%;
-    margin: 20px auto;
     -webkit-transition: display 500ms ease-in-out;
     -moz-transition: display 500ms ease-in-out;
     transition: display 500ms ease-in-out;
@@ -81,11 +109,6 @@ section:nth-of-type(1n) {
 
 section:nth-of-type(2n) {
     background-color: rgba(29, 181, 48, 0.8);
-    padding: 20px;
-}
-
-section:last-of-type {
-    margin-bottom: 180px;
 }
 
 #votesContainer div,
@@ -153,6 +176,7 @@ section:last-of-type {
 .votesList {
     list-style-type: none;
 }
+
 .votesList td {
     padding: 0 60px;
 }
@@ -162,9 +186,11 @@ section:last-of-type {
     margin: 20px 0;
     height: 460px;
 }
+
 #hidechart {
     width: 80% !important;
 }
+
 #chartContainer {
     position: absolute;
     margin: 10px auto;
@@ -191,9 +217,11 @@ footer {
     -moz-transition: width 500ms ease-in-out;
     transition: width 500ms ease-in-out;
 }
+
 #renderButton {
     text-align: center;
 }
+
 #buttonStyle {
     background-color: rgba(29, 181, 48, 0.8);
     border: 2px solid rgba(18, 112, 30, 0.8);
@@ -211,7 +239,7 @@ footer {
 }
 
 #buttonStyle:hover {
-    box-shadow: 0px 17px 20px -15px rgba(0,0,0,0.6);
+    box-shadow: 0px 17px 20px -15px rgba(0, 0, 0, 0.6);
     border: 2px solid rgba(18, 112, 30, 0.8);
-    background-color:rgba(18, 112, 30, 0.5);
+    background-color: rgba(18, 112, 30, 0.5);
 }

@@ -1,0 +1,56 @@
+nav {
+    padding: 10px 20px;
+}
+
+nav #navContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+header h1 {
+    padding: 0;
+    margin: 10px auto;
+    width: 75%;
+}
+
+header h2 {
+    padding: 10px;
+    margin: 15px auto;
+}
+
+header h2 span {
+    padding: 10px 40px;
+}
+
+#container {
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    width: 100%;
+    margin: 20px auto;
+}
+
+section:nth-of-type(2n) {
+    padding: 20px;
+}
+
+#modalContainer {
+    position: fixed;
+    width:50%;
+    height: 50%;
+    z-index: 100;
+}
