@@ -72,6 +72,7 @@ function renderChart() {
 	chart.render();
 	console.log(dataPointsViews);
 }
+// image click event listener
 document.getElementById('container').addEventListener("click", recordClick, true);
 
 // function to re-render chart after button press

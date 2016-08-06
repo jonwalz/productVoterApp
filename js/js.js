@@ -41,7 +41,13 @@ function getThreeImages() {
 }
 
 function recordClick(event) {
-    var imageSource = event.target.src;
+    var imageSource;
+    if (event.path[0].src !== undefined) { 
+        imageSource = event.path[0].src; // if you click inside the image, set to this
+    } else {
+        imageSource = event.path[0].children[0].src; //if you click outside the image, set to this
+    }
+    
     for (var index = 0; index < imageOptions.length; index++) {
         if (imageSource.indexOf(imageOptions[index].imageSource) >= 0) {
             imageOptions[index].upVotes++;
