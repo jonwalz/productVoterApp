@@ -1,4 +1,4 @@
-// show modal if local storage: userName is empty
+// show modal if local storage key of userName is empty
 
 if (!localStorage.getItem('userName')) {
     var modalContainer = document.getElementById('modalContainer');
@@ -6,6 +6,8 @@ if (!localStorage.getItem('userName')) {
 } else {
     var modalContainer = document.getElementById('modalContainer');
     modalContainer.style.display = 'none';
+    var userSpanEl = document.getElementById('userNameSet');
+    userSpanEl.innerText = localStorage.getItem('userName');
 }
 
 // assign the users input to a variable after button press
@@ -15,22 +17,19 @@ var userNameGlobal = '';
 
 function goName() {
     var userName = document.getElementById('userName').value;
-    if (localStorage.getItem('userName')) {
-
-    } else {
-        localStorage.setItem('userName', userName);
-    }
+    localStorage.setItem('userName', userName);
+    var userSpanEl = document.getElementById('userNameSet');
+    userSpanEl.innerText = localStorage.getItem('userName');
     // close modal on button press
     var modalContainer = document.getElementById('modalContainer');
     modalContainer.style.display = 'none';
-
 }
 
 goButton.addEventListener('click', goName, false);
 
 // close modal on x press
 
-function closeModal(){
+function closeModal() {
     var modalContainer = document.getElementById('modalContainer');
     modalContainer.style.display = 'none';
 }
