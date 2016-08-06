@@ -9,3 +9,14 @@ buttonContainer.appendChild(buttonEl);
 
 // Event Handler
 buttonEl.addEventListener("click", reChart);
+
+// button for resetting data
+
+var resetButtonRef = document.getElementById('clearButton');
+var resetButtonEl = document.createElement('button');
+resetButtonEl.innerText = "Reset All Data";
+resetButtonEl.id = "buttonStyle";
+
+resetButtonRef.appendChild(resetButtonEl);
+
+resetButtonEl.addEventListener('click', clearData); 

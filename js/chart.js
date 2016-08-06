@@ -99,3 +99,13 @@ function reChart(){
 	dataConstruct();
     renderChart();
 }
+
+// function to render chart if data persists in local storage
+ 
+function renderLocalChart(event){
+	if(localStorage.getItem('dataVotes') != null) {
+		renderChart();
+	} else {
+		
+	};
+};

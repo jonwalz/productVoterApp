@@ -222,7 +222,7 @@ footer {
     transition: width 500ms ease-in-out;
 }
 
-#renderButton {
+#renderButton, #clearButton {
     text-align: center;
 }
 
