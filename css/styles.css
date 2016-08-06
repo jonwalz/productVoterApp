@@ -87,7 +87,7 @@ header h1 {
 
 header h2 {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 header h2 span {
@@ -98,7 +98,6 @@ header h2 span {
 
 section {
     border-radius: 5px;
-    background-color: rgba(0, 0, 0, 0.0);
     -webkit-transition: display 500ms ease-in-out;
     -moz-transition: display 500ms ease-in-out;
     transition: display 500ms ease-in-out;
@@ -106,10 +105,6 @@ section {
 
 section:nth-of-type(1n) {
     box-shadow: none;
-}
-
-section:nth-of-type(2n) {
-    background-color: rgba(29, 181, 48, 0.8);
 }
 
 #votesContainer div,
@@ -154,6 +149,10 @@ section:nth-of-type(2n) {
     text-align: center;
     margin: 0 auto;
     max-height: 200px;
+    -webkit-user-select: none; /* Chrome all / Safari all */
+    -moz-user-select: none; /* Firefox all */
+    -ms-user-select: none; /* IE 10+ */
+    user-select: none;
 }
 
 .responsiveImg {
@@ -164,8 +163,12 @@ section:nth-of-type(2n) {
 #instructions {
     text-align: center;
     padding: 20px;
+    width: auto;
+    background-color: rgba(29, 181, 48, 0.8);
 }
-
+#votesContainer {
+    background-color: rgba(29, 181, 48, 0.8);
+}
 #votes {
     text-align: center;
 }
