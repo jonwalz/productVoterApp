@@ -3,10 +3,16 @@ var chart;
 // datapoints constructor
 var dataPointsVotes = [];
 var dataPointsViews = [];
+var localStorageDataVotes = [];
+var localStorageDataViews = [];
 
 function dataConstruct() {
 	imageOptions.forEach(function(el, i) {
 		dataPointsVotes.push({
+			y: imageOptions[i].upVotes,
+			label: imageOptions[i].name
+		});
+		localStorageDataVotes.push({
 			y: imageOptions[i].upVotes,
 			label: imageOptions[i].name
 		});
@@ -17,7 +23,15 @@ function dataConstruct() {
 			y: imageOptions[i].displays,
 			label: imageOptions[i].name
 		});
+		localStorageDataViews.push({
+			y: imageOptions[i].upVotes,
+			label: imageOptions[i].name
+		});
 	});
+	// construct data for local storage
+	
+	localStorage.setItem('dataVotes', JSON.stringify(localStorageDataVotes));
+	localStorage.setItem('dataViews', JSON.stringify(localStorageDataViews));
 }
 
 function renderChart() {
@@ -36,7 +50,7 @@ function renderChart() {
 		animationDuration: 2000,
 		colorSet: "greenShades",
 		width: chartWidthRef,
-		height: 460,
+		height: 560,
 		backgroundColor: "#4EAB59",
 		axisX: {
 			labelAutoFit: true,
