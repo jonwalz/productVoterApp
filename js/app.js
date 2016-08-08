@@ -5,7 +5,7 @@ var imageTracker = function(name, source) {
     this.name = name;
     this.displays = 0;
 };
-
+var localVotes, localViews;
 
 var imageOptions = [
     new imageTracker("Banana", "images/banana.jpg"),
@@ -56,6 +56,8 @@ function recordClick(event) {
 
     getThreeImages();
     checkVotes();
+    localVotes = getDataVotes();
+    localViews = getDataViews();
 }
 
 (function removeVotesEl() {
@@ -95,7 +97,6 @@ function checkVotes() {
             }
         }
 
-        dataConstruct();
         parentEl.parentElement.appendChild(votesListTable);
 
         // append to votes element
@@ -110,7 +111,7 @@ function checkVotes() {
 }
 getThreeImages();
 
-// hide the chart container before rendering
+// // hide the chart container before rendering
 
 (function hideChart() {
     var chartHide = document.getElementById('hideChart');
