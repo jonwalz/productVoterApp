@@ -1,16 +1,8 @@
 var chart;
 
-// initialize variables
-var dataPointsVotes = [];
-var dataPointsViews = [];
-var localStorageDataVotes = [];
-var localStorageDataViews = [];
-
-    dataPointsViews = JSON.parse(localStorage.getItem('dataViews'));
-
 function renderChart() {
-    localVotes = getDataVotes();
-    localViews = getDataViews();
+    // localVotes = getDataVotes();
+    // localViews = getDataViews();
     // set width of chart
     var chartWidthRef = document.getElementById('chartStyle').clientWidth;
     CanvasJS.addColorSet("greenShades", [
@@ -50,12 +42,12 @@ function renderChart() {
             legendText: "Votes",
             indexLabelFontColor: "#F2E394",
             type: "stackedColumn",
-            dataPoints: localVotes
+            dataPoints: getDataVotes()
         }, {
             showInLegend: true,
             legendText: "Views",
             type: "stackedColumn",
-            dataPoints: localViews
+            dataPoints: getDataViews()
         }]
     });
     chart.render();
@@ -68,6 +60,5 @@ document.getElementById('container').addEventListener("click", recordClick, true
 
 // function to re-render chart after button press
 function reChart() {
-    dataConstruct();
     renderChart();
 }

@@ -1,4 +1,5 @@
 var totalVotes = 0;
+
 var imageTracker = function(name, source) {
     this.imageSource = source;
     this.upVotes = 0;
@@ -56,8 +57,6 @@ function recordClick(event) {
 
     getThreeImages();
     checkVotes();
-    localVotes = getDataVotes();
-    localViews = getDataViews();
 }
 
 (function removeVotesEl() {

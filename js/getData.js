@@ -8,9 +8,9 @@ function getDataVotes() {
         votes.push(votesObj);
     });
     localStorage.setItem("localVotes", JSON.stringify(votes));
-    console.log(votes);
-    var data = JSON.parse(localStorage.getItem('localVotes'));
-    return data;
+    // console.log(votes);
+    return JSON.parse(localStorage.getItem('localVotes'));
+
 }
 
 function getDataViews(){
@@ -19,7 +19,7 @@ function getDataViews(){
     imageOptions.map(function(obj){
         var votesObj = {};
         votesObj.label = obj.name;
-        votesObj.y = obj.upVotes;
+        votesObj.y = obj.displays - obj.upVotes;
         views.push(votesObj);
     });
     localStorage.setItem("localViews", JSON.stringify(views));
